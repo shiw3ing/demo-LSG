@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/effects.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/base.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/styles.css">
+  <script src="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/_ds_bundle.js"></script>
+  <meta name="ext-resource-dependency" content="icons/house.svg" data-resource-id="icon_house">
+  <meta name="ext-resource-dependency" content="icons/flower-2.svg" data-resource-id="icon_flower-2">
+  <meta name="ext-resource-dependency" content="icons/briefcase.svg" data-resource-id="icon_briefcase">
+  <meta name="ext-resource-dependency" content="icons/graduation-cap.svg" data-resource-id="icon_graduation-cap">
+  <meta name="ext-resource-dependency" content="icons/heart.svg" data-resource-id="icon_heart">
+  <meta name="ext-resource-dependency" content="icons/mail.svg" data-resource-id="icon_mail">
+  <meta name="ext-resource-dependency" content="icons/file-text.svg" data-resource-id="icon_file-text">
+  <meta name="ext-resource-dependency" content="icons/layout-grid.svg" data-resource-id="icon_layout-grid">
+  <meta name="ext-resource-dependency" content="icons/sparkles.svg" data-resource-id="icon_sparkles">
+  <style>
+    body{margin:0;background:#fff;font-family:var(--font-family,"Open Sans",system-ui,sans-serif);color:var(--text,#282828)}
+    *{box-sizing:border-box}
+    a{color:inherit}
+    .lsg-link{color:var(--text-primary,#1768BE);text-decoration:none}
+    .lsg-link:hover{text-decoration:underline}
+  </style>
+</helmet>
+
+<div style="width:100%;background-color:var(--neutral-100)">
+  <!-- Government identifier bar -->
+  <div style="background:#F0F0F0;font-size:13px;color:#5b5b5b">
+    <div style="max-width:1200px;margin:0 auto;padding:7px 24px;display:flex;align-items:center;gap:8px">
+      <span style="display:inline-block;width:16px;height:16px;background:var(--brand-50,#BF3431);-webkit-mask:url(icons/flag.svg) center/contain no-repeat;mask:url(icons/flag.svg) center/contain no-repeat"></span>
+      <span>A Singapore Government Agency Website</span>
+      <a href="#" class="lsg-link" style="display:inline-flex;align-items:center;gap:4px;font-weight:600">How to identify
+        <span style="display:inline-block;width:14px;height:14px;background:currentColor;-webkit-mask:url(icons/chevron-down.svg) center/contain no-repeat;mask:url(icons/chevron-down.svg) center/contain no-repeat"></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scam warning banner -->
+  <sc-if value="{{ dashScamOpen }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#F8F8F8;border-bottom:1px solid var(--border,#DDE1E2)">
+      <div style="max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:flex-start;gap:14px">
+        <span style="display: inline-block; flex-shrink: 0; width: 22px; height: 22px; margin-top: 1px; -webkit-mask: url(icons/triangle-alert.svg) center/contain no-repeat; mask: url(icons/triangle-alert.svg) center/contain no-repeat; background-color: var(--icon)"></span>
+        <div style="flex:1;font-size:15px;line-height:1.5">
+          <div style="font-weight:700;color:var(--text,#282828);margin-bottom:2px">Beware of impersonation scams</div>
+          <div style="color:#4a4a4a">Government officials will never ask you to transfer money or disclose bank log-in details. If you're unsure, please call the 24/7 ScamShield Helpline at 1799 or visit the <a href="#" class="lsg-link" style="font-weight:600">ScamShield website</a>.</div>
+        </div>
+        <button onClick="{{ closeDashScam }}" aria-label="Dismiss" style="border:none;background:transparent;cursor:pointer;padding:4px;flex-shrink:0">
+          <span style="display:inline-block;width:18px;height:18px;background:#6b6b6b;-webkit-mask:url(icons/x.svg) center/contain no-repeat;mask:url(icons/x.svg) center/contain no-repeat"></span>
+        </button>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Dashboard header -->
+  <header style="background:#fff;border-bottom:1px solid var(--border,#DDE1E2)">
+    <div style="max-width:1440px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between">
+      <div style="font-size:26px;font-weight:700;color:var(--text,#282828)">My Life<span style="color:var(--brand-50,#BF3431)">SG</span></div>
+      <div style="display:flex;align-items:center;gap:28px">
+        <a href="LifeSG-Homepage.dc.html" class="lsg-link" style="font-size:16px;font-weight:600">Return to LifeSG home</a>
+        <div style="width:1px;height:24px;background:var(--border,#DDE1E2)"></div>
+        <span style="position:relative;display:inline-flex">
+          <span style="display:inline-block;width:24px;height:24px;background:#282828;-webkit-mask:url(icons/bell.svg) center/contain no-repeat;mask:url(icons/bell.svg) center/contain no-repeat"></span>
+          <span style="position:absolute;top:-6px;right:-8px;display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--bg-error-strong,#CB2213);color:#fff;font-size:11px;font-weight:700">8</span>
+        </span>
+        <x-import component-from-global-scope="LifeSGDesignSystem_15079f.Avatar" name="Maria" hint-size="40px,40px"></x-import>
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width: 1440px; margin: 0 auto; display: flex; align-items: stretch">
+    <!-- Sidebar -->
+    <nav style="width: 280px; flex-shrink: 0; box-sizing: content-box; background: var(--bg-primary-subtlest,#F7F9FF); margin-left: calc(-1 * max(0px, (100vw - 1440px) / 2)); padding: 28px 24px; padding-left: calc(24px + max(0px, (100vw - 1440px) / 2)); min-height: calc(100vh - 130px)">
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 0;text-decoration:none;color:var(--text-primary,#1768BE);font-size:17px;font-weight:700">
+        <span style="width:20px;height:20px;background:currentColor;-webkit-mask:url(icons/layout-grid.svg) center/contain no-repeat;mask:url(icons/layout-grid.svg) center/contain no-repeat"></span>Dashboard
+      </a>
+      <div style="height:1px;background:var(--border,#DDE1E2);margin:16px 0"></div>
+      <div style="font-size:14px;font-weight:700;color:#8a8a8a;letter-spacing:.3px;margin:8px 0 4px">Action centre</div>
+      <a href="MyLifeSG-your-mails.dc.html" style="display:flex;align-items:center;gap:12px;padding:10px 0;text-decoration:none;color:var(--text,#282828);font-size:17px">
+        <span style="width:20px;height:20px;background:#5b5b5b;-webkit-mask:url(icons/mail.svg) center/contain no-repeat;mask:url(icons/mail.svg) center/contain no-repeat"></span>Your mails
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--bg-primary,#1768BE);color:#fff;font-size:11px;font-weight:700">8</span>
+      </a>
+      <a href="MyLifeSG-applications.dc.html" style="display:flex;align-items:center;gap:12px;padding:10px 0;text-decoration:none;color:var(--text,#282828);font-size:17px">
+        <span style="width:20px;height:20px;background:#5b5b5b;-webkit-mask:url(icons/file-text.svg) center/contain no-repeat;mask:url(icons/file-text.svg) center/contain no-repeat"></span>Application status
+        <span style="display: inline-block; width: 14px; height: 14px; border-radius: 999px; background-color: var(--icon-primary)"></span>
+      </a>
+      <div style="height:1px;background:var(--border,#DDE1E2);margin:16px 0"></div>
+      <div style="font-size:14px;font-weight:700;color:#8a8a8a;letter-spacing:.3px;margin:8px 0 4px">For you</div>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 0;text-decoration:none;color:var(--text,#282828);font-size:17px">
+        <span style="width:20px;height:20px;background:#5b5b5b;-webkit-mask:url(icons/heart.svg) center/contain no-repeat;mask:url(icons/heart.svg) center/contain no-repeat"></span>Your benefits
+      </a>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 0;text-decoration:none;color:var(--text,#282828);font-size:17px">
+        <span style="width:20px;height:20px;background:#5b5b5b;-webkit-mask:url(icons/file-text.svg) center/contain no-repeat;mask:url(icons/file-text.svg) center/contain no-repeat"></span>Your records
+      </a>
+    </nav>
+
+    <!-- Main content -->
+    <main style="flex: 1; min-width: 0; box-sizing: content-box; margin-right: calc(-1 * max(0px, (100vw - 1440px) / 2)); padding: 32px 40px 64px; padding-right: calc(40px + max(0px, (100vw - 1440px) / 2)); background: linear-gradient(180deg,#FFFFFF 0%,#FFFFFF 55%,#FBEFE4 100%); flex-grow: 1">
+      <h1 style="font-size: 32px; font-weight: 700; color: var(--text,#282828); margin: 0 0 24px; margin-left: 32px">Hi Joshua,</h1>
+
+      <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px; align-items: start; padding-left: 32px" data-om-label="Attention">
+        <div>
+          <h2 style="font-size:20px;font-weight:700;color:var(--text,#282828);margin:0 0 14px">For your attention</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px">
+            <x-import component-from-global-scope="LifeSGDesignSystem_15079f.Card" hint-size="auto,auto">
+              <div style="display:flex;align-items:center;gap:14px">
+                <span style="flex-shrink:0;width:40px;height:40px;border-radius:8px;background:var(--bg-primary-subtlest,#E7F0FA);display:inline-flex;align-items:center;justify-content:center">
+                  <span style="width:20px;height:20px;background:var(--text-primary,#1768BE);-webkit-mask:url(icons/mail.svg) center/contain no-repeat;mask:url(icons/mail.svg) center/contain no-repeat"></span>
+                </span>
+                <span style="font-size:17px;color:var(--text,#282828);flex:1">Mail pending action</span>
+                <span style="font-size:28px;font-weight:700;color:var(--text,#282828)">2</span>
+              </div>
+            </x-import>
+            <x-import component-from-global-scope="LifeSGDesignSystem_15079f.Card" hint-size="auto,auto">
+              <div style="display:flex;align-items:center;gap:14px">
+                <span style="flex-shrink:0;width:40px;height:40px;border-radius:8px;background:var(--bg-primary-subtlest,#E7F0FA);display:inline-flex;align-items:center;justify-content:center">
+                  <span style="width:20px;height:20px;background:var(--text-primary,#1768BE);-webkit-mask:url(icons/file-text.svg) center/contain no-repeat;mask:url(icons/file-text.svg) center/contain no-repeat"></span>
+                </span>
+                <span style="font-size:17px;color:var(--text,#282828);flex:1">Applications pending action</span>
+                <span style="font-size:28px;font-weight:700;color:var(--text,#282828)">3</span>
+              </div>
+            </x-import>
+          </div>
+
+          <x-import component-from-global-scope="LifeSGDesignSystem_15079f.Card" hint-size="auto,auto">
+            <div style="display:flex;align-items:center;gap:10px;font-size:17px;font-weight:700;color:var(--text,#282828);margin-bottom:16px">
+              <span style="width:20px;height:20px;background:#282828;-webkit-mask:url(icons/triangle-alert.svg) center/contain no-repeat;mask:url(icons/triangle-alert.svg) center/contain no-repeat"></span>Complete these soon
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <sc-for list="{{ tasks }}" as="task" hint-placeholder-count="3">
+                <div style="display:flex;align-items:center;gap:16px;background:var(--bg-strong,#F7F7F7);border-radius:8px;padding:14px 18px">
+                  <x-import component-from-global-scope="LifeSGDesignSystem_15079f.Tag" color="{{ task.tagColor }}" hint-size="auto,auto" style="position: static; display: flex; justify-content: center; align-items: center">{{ task.due }}</x-import>
+                  <div style="flex:1">
+                    <div style="font-size:16px;font-weight:700;color:var(--text,#282828)">{{ task.title }}</div>
+                    <div style="font-size:14px;color:#5b5b5b;margin-top:2px">{{ task.detail }}</div>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </x-import>
+        </div>
+
+        <div>
+          <h2 style="font-size: 16px; font-weight: 600; color: var(--text,#282828); margin: 0 0 14px">Recent interaction</h2>
+          <div style="display:flex;flex-direction:column">
+            <sc-for list="{{ interactions }}" as="it" hint-placeholder-count="5">
+              <div style="display: flex; gap: 12px; position: relative; padding-bottom: 8px">
+                <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center">
+                  <span style="width:10px;height:10px;border-radius:999px;border:2px solid var(--text,#282828);background:#fff;flex-shrink:0"></span>
+                  <sc-if value="{{ it.hasLine }}" hint-placeholder-val="{{ true }}"><span style="flex:1;width:1px;background:var(--border,#DDE1E2);margin-top:2px"></span></sc-if>
+                </div>
+                <div>
+                  <div style="font-size: 16px; font-weight: 600; color: var(--text,#282828)">{{ it.title }}</div>
+                  <div style="font-size:14px;color:#8a8a8a;margin-top:2px">{{ it.date }}</div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <div style="box-sizing: border-box; padding-right: 0px; padding-left: 32px" data-om-label="Benefits"><div style="display: flex; align-items: center; justify-content: space-between; margin: 32px 0 14px; padding-left: 0px">
+        <h2 style="font-size:20px;font-weight:700;color:var(--text,#282828);margin:0">Your benefits</h2>
+        <x-import component-from-global-scope="LifeSGDesignSystem_15079f.Button" styleType="secondary" size="small" hint-size="auto,40px">View all benefits and credits</x-import>
+      </div><x-import component-from-global-scope="LifeSGDesignSystem_15079f.Card" hint-size="auto,auto" style="padding-left: 32px">
+        <div style="font-size:15px;color:#5b5b5b;margin-bottom:6px">Estimated benefits for 2026</div>
+        <div style="font-size:34px;font-weight:700;color:var(--text,#282828)">$10,000</div>
+        <div style="height:1px;background:var(--border,#DDE1E2);margin:20px 0"></div>
+        <div style="font-size:16px;font-weight:700;color:var(--text,#282828);margin-bottom:14px">Government issues credits</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+          <sc-for list="{{ credits }}" as="cr" hint-placeholder-count="3">
+            <div style="background: var(--bg-strong,#F7F7F7); border: 1px solid var(--border,#DDE1E2); border-radius: 8px; padding: 16px">
+              <div style="font-size:17px;font-weight:700;color:var(--text,#282828);margin-bottom:14px">{{ cr.label }}</div>
+              <div style="background: #fff; border-radius: 6px; padding: 14px 16px; height: 100px">
+                <div style="font-size:22px;font-weight:700;color:var(--text-primary,#1768BE);margin-bottom:6px">$ {{ cr.amount }}</div>
+                <div style="font-size: 14px; color: #8a8a8a; line-height: 1.4">{{ cr.note }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </x-import></div>
+      
+
+      <div style="box-sizing: border-box; padding-left: 32px" data-om-label="AI"><div style="{{ recPanelStyle }}">
+      <div style="{{ recEyebrowStyle }}"><span style="width:14px;height:14px;background:currentColor;-webkit-mask:url({{ recSparkUrl }}) center/contain no-repeat;mask:url({{ recSparkUrl }}) center/contain no-repeat"></span>Our recommender</div>
+      <h2 style="font-size:24px;font-weight:700;color:var(--text,#282828);margin:0 0 4px">Discover these journey</h2>
+      <p style="font-size:15px;color:#5b5b5b;margin:0 0 20px">{{ recSubtitle }}</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <sc-for list="{{ journeys }}" as="j" hint-placeholder-count="4">
+          <div style="display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid var(--border,#DDE1E2);border-radius:12px;padding:24px 26px;box-shadow:0 2px 4px rgba(104,104,104,.10)">
+            <div style="display:inline-flex;align-items:center;gap:7px;align-self:flex-start;font-size:13px;font-weight:700;color:{{ j.badgeColor }};background:{{ j.badgeBg }};border-radius:999px;padding:5px 13px 5px 10px;margin-bottom:18px"><span style="flex-shrink:0;width:13px;height:13px;background:{{ j.badgeColor }};-webkit-mask:url({{ j.matchIconUrl }}) center/contain no-repeat;mask:url({{ j.matchIconUrl }}) center/contain no-repeat"></span>{{ j.reason }}</div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+              <span style="flex-shrink:0;width:26px;height:26px;background:{{ j.color }};-webkit-mask:url({{ j.iconUrl }}) center/contain no-repeat;mask:url({{ j.iconUrl }}) center/contain no-repeat"></span>
+              <div style="font-size:21px;font-weight:700;color:var(--text,#282828)">{{ j.title }}</div>
+            </div>
+            <div style="font-size:15.5px;color:#4a4a4a;line-height:1.6">{{ j.desc }}</div>
+          </div>
+        </sc-for>
+      </div>
+      </div></div>
+    <div style="box-sizing: border-box; padding-top: 64px"><img src="assets/dashboard-illustration.png" alt="" style="display:block;width:100%;max-width:1440px;margin:0 auto;height:auto"></div></main>
+  </div>
+
+  <!-- Illustration band -->
+  
+</div>
+
+<template id="__bundler_thumbnail" data-bg-color="#E7F0FA">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#E7F0FA"/><g fill="#1768BE"><rect x="360" y="240" width="220" height="150" rx="16"/><rect x="620" y="240" width="220" height="150" rx="16"/><rect x="360" y="430" width="480" height="130" rx="16"/></g></svg>
+</template></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;recPanel&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;None&quot;,&quot;Tinted&quot;,&quot;Gradient&quot;],&quot;default&quot;:&quot;Tinted&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Recommended for you&quot;},&quot;recAccent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#1768BE&quot;,&quot;options&quot;:[&quot;#1768BE&quot;,&quot;#7A5BA8&quot;,&quot;#257645&quot;,&quot;#C0397B&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Recommended for you&quot;}}">
+class Component extends DCLogic {
+  state = { dashScamOpen: true };
+
+  renderVals() {
+    const s = this.state;
+    const iconUrl = (name) => (window.__resources && window.__resources["icon_" + name]) || ("icons/" + name + ".svg");
+
+    const tasks = [
+      { due: "Due in 3 days", tagColor: "red", title: "Lasting power of attorney", detail: "Draft expires on 23 August 2026" },
+      { due: "Due in 5 days", tagColor: "red", title: "Advance Care Planning", detail: "Draft expires on 25 August 2026" },
+      { due: "Due soon", tagColor: "yellow", title: "Parking fines", detail: "Deadline on 23 September 2026" },
+    ];
+
+    const interactionDefs = [
+      { title: "Updated personal profile", date: "31 May 2026" },
+      { title: "Paid parking fines", date: "21 May 2026" },
+      { title: "Continue with ACP draft", date: "21 May 2026" },
+      { title: "Completed wills learning", date: "21 May 2026" },
+      { title: "Started ACP form", date: "21 April 2026" },
+    ];
+    const interactions = interactionDefs.map((it, i) => ({ ...it, hasLine: i < interactionDefs.length - 1 }));
+
+    const credits = [
+      { label: "SG Culture pass", amount: "100", note: "Expiring 31 Dec 2025" },
+      { label: "Skillsfuture credits", amount: "4,500", note: "Some credits expires on 30 Jun 2026" },
+      { label: "CDC vouchers", amount: "500", note: "Jan 2025 CDC payout expires 31 Dec 2026" },
+    ];
+
+    const journeyDefs = [
+      { icon: "house", title: "Navigating home ownership", desc: "Explore your grant eligibility and property financing options with our guided first-home acquisition pathway.", badgeType: "primary" },
+      { icon: "flower-2", title: "Start legacy planning", desc: "Start Legacy planning to put your mind at ease when difficult situation happens, such as death and when you lose mental capacity.", badgeType: "primary" },
+      { icon: "briefcase", title: "Wealth initiatives", desc: "Build your financial security through CPF and other initiatives designed to accumulate long-term wealth.", badgeType: "primary" },
+      { icon: "graduation-cap", title: "Learning and upskilling", desc: "Find courses that explore your personal interest or consider upskill to pivot your professional career.", badgeType: "warning" },
+    ];
+    const badgeStyles = {
+      primary: { color: "var(--text-primary,#1768BE)", bg: "var(--bg-primary-subtlest,#E7F0FA)" },
+      warning: { color: "var(--text-warning,#98590C)", bg: "var(--bg-warning-subtle,#FBF3E7)" },
+    };
+    const recReasons = [
+      "Recent HFE application",
+      "Recently started on LPA form",
+      "Popular in your bracket",
+      "Skillsfuture credits expiring",
+    ];
+    const hexTint = (hex, a) => {
+      const h = String(hex).replace("#", "");
+      const n = h.length === 3 ? h.split("").map((c) => c + c).join("") : h;
+      const r = parseInt(n.slice(0, 2), 16), g = parseInt(n.slice(2, 4), 16), b = parseInt(n.slice(4, 6), 16);
+      return "rgba(" + r + "," + g + "," + b + "," + a + ")";
+    };
+    const recAccent = this.props.recAccent || "#1768BE";
+    const recPanel = this.props.recPanel || "Tinted";
+    const journeys = journeyDefs.map((j, i) => ({
+      ...j,
+      color: recAccent,
+      tint: hexTint(recAccent, 0.1),
+      iconUrl: iconUrl(j.icon),
+      badgeColor: badgeStyles[j.badgeType].color,
+      badgeBg: badgeStyles[j.badgeType].bg,
+      reason: recReasons[i],
+      matchIconUrl: iconUrl("sparkles"),
+    }));
+    const recPanelStyle = recPanel === "Gradient"
+      ? { marginTop: "36px", padding: "28px 30px", borderRadius: "16px", border: "1px solid " + hexTint(recAccent, 0.35), background: "linear-gradient(135deg," + hexTint(recAccent, 0.16) + " 0%, #FFFFFF 72%)" }
+      : recPanel === "Tinted"
+      ? { marginTop: "36px", padding: "28px 30px", borderRadius: "16px", border: "1px solid " + hexTint(recAccent, 0.28), background: hexTint(recAccent, 0.06) }
+      : { marginTop: "36px" };
+    const recEyebrowStyle = { display: "inline-flex", alignItems: "center", gap: "7px", fontSize: "12.5px", fontWeight: 700, letterSpacing: ".5px", textTransform: "uppercase", color: recAccent, background: hexTint(recAccent, 0.12), borderRadius: "999px", padding: "5px 13px 5px 10px", marginBottom: "12px" };
+    const recSparkUrl = iconUrl("sparkles");
+    const recSubtitle = "Suggested based on recent activity and what others similar to your profile are embarking on";
+
+    return {
+      dashScamOpen: s.dashScamOpen,
+      closeDashScam: () => this.setState({ dashScamOpen: false }),
+      tasks,
+      interactions,
+      credits,
+      recPanelStyle,
+      recEyebrowStyle,
+      recSparkUrl,
+      recSubtitle,
+      journeys,
+    };
+  }
+}
+</script>
+</body>
+</html>

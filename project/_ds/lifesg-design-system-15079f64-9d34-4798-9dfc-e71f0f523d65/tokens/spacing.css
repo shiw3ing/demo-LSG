@@ -1,0 +1,28 @@
+/* ============================================================
+   LifeSG — Spacing & layout tokens
+   Source: /theme/spacing (default-spacing-set). Values in px.
+   `spacing-*` = component-level gaps; `layout-*` = page-level rhythm.
+   ============================================================ */
+
+:root {
+    --spacing-0: 0px;
+    --spacing-4: 4px;
+    --spacing-8: 8px;
+    --spacing-12: 12px;
+    --spacing-16: 16px;
+    --spacing-20: 20px;
+    --spacing-24: 24px;
+    --spacing-32: 32px;
+    --spacing-40: 40px;
+    --spacing-48: 48px;
+    --spacing-64: 64px;
+    --spacing-72: 72px;
+
+    --layout-xs: 8px;
+    --layout-sm: 16px;
+    --layout-md: 24px;
+    --layout-lg: 32px;
+    --layout-xl: 48px;
+    --layout-xxl: 64px;
+    --layout-xxxl: 128px;
+}

@@ -1,0 +1,44 @@
+/* ============================================================
+   LifeSG — Effects: radius, border, shadow, motion
+   Source: /theme/radius, /theme/border, /theme/shadow, /theme/motion
+   ============================================================ */
+
+:root {
+    /* ---------- Radius ---------- */
+    --radius-none: 0px;
+    --radius-xs: 2px;
+    --radius-sm: 4px;   /* buttons, tags, inputs */
+    --radius-md: 8px;   /* cards */
+    --radius-lg: 12px;  /* large surfaces, modals */
+    --radius-full: 9999px;
+
+    /* ---------- Border widths ---------- */
+    --border-width-005: 0.5px;
+    --border-width-010: 1px;  /* default */
+    --border-width-020: 2px;  /* alert accent, emphasis */
+    --border-width-040: 4px;
+
+    /* ---------- Shadow (elevation) ----------
+       Built from neutral-50 (#686868) at two alphas: 24% subtle, 50% strong. */
+    --shadow-xs-subtle: 0 0 4px 1px rgba(104, 104, 104, 0.24);
+    --shadow-xs-strong: 0 0 4px 1px rgba(104, 104, 104, 0.50);
+    --shadow-sm-subtle: 0 2px 4px 0 rgba(104, 104, 104, 0.24);
+    --shadow-sm-strong: 0 2px 4px 0 rgba(104, 104, 104, 0.50);
+    --shadow-md-subtle: 0 2px 8px 0 rgba(104, 104, 104, 0.24);
+    --shadow-md-strong: 0 2px 8px 0 rgba(104, 104, 104, 0.50);
+    --shadow-lg-subtle: 0 2px 12px 1px rgba(104, 104, 104, 0.24);
+    --shadow-lg-strong: 0 2px 12px 1px rgba(104, 104, 104, 0.50);
+
+    /* ---------- Motion ---------- */
+    --duration-150: 150ms;  /* @kind other */
+    --duration-250: 250ms;  /* @kind other */ /* default UI transitions */
+    --duration-350: 350ms;  /* @kind other */
+    --duration-500: 500ms;  /* @kind other */
+    --duration-800: 800ms;  /* @kind other */
+    --duration-1000: 1000ms; /* @kind other */
+
+    --ease-default: cubic-bezier(0.45, 0.05, 0.55, 0.95);  /* @kind other */
+    --ease-standard: cubic-bezier(0.86, 0, 0.07, 1);  /* @kind other */
+    --ease-entrance: cubic-bezier(0.18, 0.13, 0, 1);  /* @kind other */
+    --ease-exit: cubic-bezier(1, 0, 0.8, 0.85);  /* @kind other */
+}

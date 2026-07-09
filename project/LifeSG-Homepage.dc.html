@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#FBE6DC">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#FBE6DC"/>
+    <text x="600" y="430" font-family="Open Sans, sans-serif" font-size="150" font-weight="800" text-anchor="middle"><tspan fill="#282828">Life</tspan><tspan fill="#BF3431">SG</tspan></text>
+  </svg>
+</template>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/effects.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/base.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/styles.css">
+  <script src="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/_ds_bundle.js"></script>
+  <meta name="ext-resource-dependency" content="icons/baby.svg" data-resource-id="icon_baby">
+  <meta name="ext-resource-dependency" content="icons/flower-2.svg" data-resource-id="icon_flower-2">
+  <meta name="ext-resource-dependency" content="icons/heart-handshake.svg" data-resource-id="icon_heart-handshake">
+  <meta name="ext-resource-dependency" content="icons/briefcase.svg" data-resource-id="icon_briefcase">
+  <meta name="ext-resource-dependency" content="icons/house.svg" data-resource-id="icon_house">
+  <meta name="ext-resource-dependency" content="icons/graduation-cap.svg" data-resource-id="icon_graduation-cap">
+  <meta name="ext-resource-dependency" content="icons/heart.svg" data-resource-id="icon_heart">
+  <meta name="ext-resource-dependency" content="icons/palmtree.svg" data-resource-id="icon_palmtree">
+  <meta name="ext-resource-dependency" content="icons/menu.svg" data-resource-id="icon_menu">
+  <meta name="ext-resource-dependency" content="icons/x.svg" data-resource-id="icon_x">
+  <meta name="ext-resource-dependency" content="icons/mail.svg" data-resource-id="icon_mail">
+  <meta name="ext-resource-dependency" content="icons/file-text.svg" data-resource-id="icon_file-text">
+  <meta name="ext-resource-dependency" content="icons/file-check.svg" data-resource-id="icon_file-check">
+  <meta name="ext-resource-dependency" content="icons/bell.svg" data-resource-id="icon_bell">
+  <meta name="ext-resource-dependency" content="icons/layout-grid.svg" data-resource-id="icon_layout-grid">
+  <meta name="ext-resource-dependency" content="icons/sparkles.svg" data-resource-id="icon_sparkles">
+  <meta name="ext-resource-dependency" content="icons/vial.svg" data-resource-id="icon_vial">
+  <style>
+    body{margin:0;background:#fff;font-family:var(--font-family,"Open Sans",system-ui,sans-serif);color:var(--text,#282828)}
+    *{box-sizing:border-box}
+    a{color:inherit}
+    .lsg-link{color:var(--text-primary,#1768BE);text-decoration:none}
+    .lsg-link:hover{text-decoration:underline}
+    .lsg-footer-hit{display:block;border-radius:4px}
+    .lsg-footer-hit:hover{background:rgba(23,104,190,0.08);outline:1px solid rgba(23,104,190,0.25)}
+
+    /* responsive helpers */
+    .lsg-hamburger{display:none}
+    .lsg-mobile-menu{display:none}
+    .lsg-band-tablet,.lsg-band-mobile{display:none}
+
+    /* tablet */
+    @media (max-width:1024px){
+      .lsg-grid-3{grid-template-columns:repeat(2,1fr) !important;column-gap:40px !important}
+      .lsg-footer-grid{grid-template-columns:1fr 1fr !important;gap:32px !important}
+      .lsg-hero-h1{font-size:38px !important}
+      .lsg-band-desktop{display:none !important}
+      .lsg-band-tablet{display:block !important}
+    }
+
+    /* mobile */
+    @media (max-width:640px){
+      .lsg-nav-desktop{display:none !important}
+      .lsg-download-top{display:none !important}
+      .lsg-hamburger{display:inline-flex !important}
+      .lsg-govbar-hint{display:none !important}
+      .lsg-header-row{padding:14px 16px !important}
+      .lsg-container{padding-left:16px !important;padding-right:16px !important}
+      .lsg-section{padding-left:16px !important;padding-right:16px !important}
+      .lsg-grid-3{grid-template-columns:1fr !important}
+      .lsg-footer-grid{grid-template-columns:1fr !important;gap:28px !important;padding:36px 16px 32px !important}
+      .lsg-hero-h1{font-size:28px !important;margin-bottom:22px !important}
+      .lsg-hero-inner{padding:28px 0 4px !important}
+      .lsg-search-row{flex-direction:column !important}
+      .lsg-search-row > *{width:100% !important}
+      .lsg-chips{flex-wrap:nowrap !important;overflow-x:auto !important;justify-content:flex-start !important;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+      .lsg-chips > a{flex:0 0 auto !important}
+      .lsg-moments-head{flex-direction:column !important;align-items:flex-start !important;gap:12px}
+      .lsg-section-h2{font-size:24px !important}
+      .lsg-band-tablet{display:none !important}
+      .lsg-band-mobile{display:block !important}
+      .lsg-legal{flex-direction:column !important;align-items:flex-start !important;gap:12px !important}
+    }
+  </style>
+</helmet>
+
+<div style="width: 100%; background-color: var(--neutral-100)">
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+
+  <!-- Government identifier bar -->
+  <div style="background:#F0F0F0;font-size:13px;color:#5b5b5b">
+    <div style="max-width:1200px;margin:0 auto;padding:7px 24px;display:flex;align-items:center;gap:8px" class="lsg-container">
+      <span style="display:inline-block;width:16px;height:16px;background:var(--brand-50,#BF3431);-webkit-mask:url(icons/flag.svg) center/contain no-repeat;mask:url(icons/flag.svg) center/contain no-repeat"></span>
+      <span>A Singapore Government Agency Website</span>
+      <a href="#" class="lsg-link lsg-govbar-hint" style="display:inline-flex;align-items:center;gap:4px;font-weight:600">How to identify
+        <span style="display:inline-block;width:14px;height:14px;background:currentColor;-webkit-mask:url(icons/chevron-down.svg) center/contain no-repeat;mask:url(icons/chevron-down.svg) center/contain no-repeat"></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scam warning banner -->
+  <sc-if value="{{ scamOpen }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#F8F8F8;border-bottom:1px solid var(--border,#DDE1E2)">
+      <div style="max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:flex-start;gap:14px">
+        <span style="display: inline-block; flex-shrink: 0; width: 22px; height: 22px; margin-top: 1px; -webkit-mask: url(icons/triangle-alert.svg) center/contain no-repeat; mask: url(icons/triangle-alert.svg) center/contain no-repeat; background-color: var(--icon)"></span>
+        <div style="flex:1;font-size:15px;line-height:1.5">
+          <div style="font-weight:700;color:var(--text,#282828);margin-bottom:2px">Beware of impersonation scams</div>
+          <div style="color:#4a4a4a">Government officials will never ask you to transfer money or disclose bank log-in details. If you're unsure, please call the 24/7 ScamShield Helpline at 1799 or visit the <a href="#" class="lsg-link" style="font-weight:600">ScamShield website</a>.</div>
+        </div>
+        <button onClick="{{ closeScam }}" aria-label="Dismiss" style="border:none;background:transparent;cursor:pointer;padding:4px;flex-shrink:0">
+          <span style="display:inline-block;width:18px;height:18px;background:#6b6b6b;-webkit-mask:url(icons/x.svg) center/contain no-repeat;mask:url(icons/x.svg) center/contain no-repeat"></span>
+        </button>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- Header / nav -->
+  <header style="background:#fff;border-bottom:1px solid var(--border,#DDE1E2);position:relative;z-index:20">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap" class="lsg-header-row">
+      <a href="#" style="display:inline-flex;align-items:center"><img src="https://assets.life.gov.sg/lifesg/logo-lifesg.svg" alt="LifeSG" style="height: 30px; width: 100%"></a>
+      <nav class="lsg-nav-desktop" style="display: flex; align-items: center; gap: 36px; height: 100%">
+        <a href="#" style="font-size:17px;font-weight:700;color:var(--text,#282828);text-decoration:none;padding:6px 0;border-bottom:3px solid var(--primary-50,#1768BE)">Home</a><button onClick="{{ toggleLife }}" style="display:inline-flex;align-items:center;gap:6px;font-size:17px;font-weight:400;color:var(--text,#282828);background:none;border:none;cursor:pointer;font-family:inherit;padding:6px 0">Life moments
+          <span style="display:inline-block;width:16px;height:16px;background:currentColor;transition:transform .2s;transform:{{ lifeCaret }};-webkit-mask:url(icons/chevron-down.svg) center/contain no-repeat;mask:url(icons/chevron-down.svg) center/contain no-repeat"></span>
+        </button><button onClick="{{ toggleTopics }}" style="display:inline-flex;align-items:center;gap:6px;font-size:17px;font-weight:400;color:var(--text,#282828);background:none;border:none;cursor:pointer;font-family:inherit;padding:6px 0">Topics
+          <span style="display:inline-block;width:16px;height:16px;background:currentColor;transition:transform .2s;transform:{{ topicsCaret }};-webkit-mask:url(icons/chevron-down.svg) center/contain no-repeat;mask:url(icons/chevron-down.svg) center/contain no-repeat"></span>
+        </button><button aria-label="Search" style="background:none;border:none;cursor:pointer;padding:6px">
+          <span style="display:inline-block;width:22px;height:22px;background:var(--text,#282828);-webkit-mask:url(icons/search.svg) center/contain no-repeat;mask:url(icons/search.svg) center/contain no-repeat"></span>
+        </button><x-import component-from-global-scope="LifeSGDesignSystem_15079f.Button" styleType="secondary" hint-size="auto,40px" class="lsg-download-top" style="font-weight:700" onClick="{{ goToDashboard }}">Log in</x-import>
+        
+        
+        
+      </nav>
+      
+      
+    </div>
+
+    <!-- dropdown panel -->
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--border,#DDE1E2);box-shadow:var(--shadow-md-subtle,0 8px 16px rgba(104,104,104,.16))">
+        <div style="max-width:1200px;margin:0 auto;padding:28px 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px 40px">
+          <sc-for list="{{ menuItems }}" as="mi" hint-placeholder-count="6">
+            <a href="#" class="lsg-link" style="font-size:16px;font-weight:600;padding:8px 0;display:inline-flex;align-items:center;gap:8px">{{ mi }}
+              <span style="display:inline-block;width:15px;height:15px;background:currentColor;-webkit-mask:url(icons/chevron-right.svg) center/contain no-repeat;mask:url(icons/chevron-right.svg) center/contain no-repeat"></span>
+            </a>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- mobile menu -->
+    <sc-if value="{{ mobileNavOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="border-top:1px solid var(--border,#DDE1E2);background:#fff;padding:8px 16px 20px;display:flex;flex-direction:column">
+        <a href="#" style="font-size:17px;font-weight:700;color:var(--text,#282828);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--border,#DDE1E2)">Home</a>
+        <a href="#" style="display:flex;align-items:center;justify-content:space-between;font-size:17px;color:var(--text,#282828);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--border,#DDE1E2)">Life moments<span style="width:18px;height:18px;background:currentColor;-webkit-mask:url(icons/chevron-right.svg) center/contain no-repeat;mask:url(icons/chevron-right.svg) center/contain no-repeat"></span></a>
+        <a href="#" style="display:flex;align-items:center;justify-content:space-between;font-size:17px;color:var(--text,#282828);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--border,#DDE1E2)">Topics<span style="width:18px;height:18px;background:currentColor;-webkit-mask:url(icons/chevron-right.svg) center/contain no-repeat;mask:url(icons/chevron-right.svg) center/contain no-repeat"></span></a>
+        <a href="#" style="display:flex;align-items:center;gap:10px;font-size:17px;color:var(--text,#282828);text-decoration:none;padding:14px 0"><span style="width:20px;height:20px;background:var(--text,#282828);-webkit-mask:url(icons/search.svg) center/contain no-repeat;mask:url(icons/search.svg) center/contain no-repeat"></span>Search</a>
+        <div style="margin-top:12px"><x-import component-from-global-scope="LifeSGDesignSystem_15079f.Button" hint-size="100%,44px" style="width:100%;font-weight:700">Download the app</x-import></div>
+      </div>
+    </sc-if>
+  </header>
+
+  <!-- Hero -->
+  <section style="background:linear-gradient(180deg,#FBE6DC 0%,#FBF0E8 42%,#FFFFFF 100%);position:relative">
+    <div style="max-width:1200px;margin:0 auto;padding:24px 24px 0" class="lsg-container">
+      <div style="display:inline-flex;background:#fff;border:1px solid var(--border,#DDE1E2);border-radius:6px;padding:5px;gap:2px;box-shadow:var(--shadow-xs-subtle,0 1px 2px rgba(104,104,104,.16))">
+        <sc-for list="{{ langs }}" as="lg" hint-placeholder-count="4">
+          <sc-if value="{{ lg.on }}" hint-placeholder-val="{{ true }}">
+            <button onClick="{{ lg.pick }}" style="font-family:inherit;font-size:15px;font-weight:700;border:none;cursor:pointer;padding:7px 16px;border-radius:4px;background:var(--bg-primary-subtler,#E7F0FA);color:var(--text-primary,#1768BE)">{{ lg.label }}</button>
+          </sc-if>
+          <sc-if value="{{ lg.off }}" hint-placeholder-val="{{ false }}">
+            <button onClick="{{ lg.pick }}" style="font-family:inherit;font-size:15px;font-weight:400;border:none;cursor:pointer;padding:7px 16px;border-radius:4px;background:transparent;color:#4a4a4a">{{ lg.label }}</button>
+          </sc-if>
+        </sc-for>
+      </div>
+
+      <div style="text-align:center;padding:44px 0 8px" class="lsg-hero-inner">
+        <h1 class="lsg-hero-h1" style="font-size:46px;line-height:1.18;font-weight:700;letter-spacing:-0.5px;color:var(--text,#282828);max-width:760px;margin:0 auto 30px">Singapore government services and information in one place</h1>
+
+        <!-- search -->
+        <div style="display:flex;gap:12px;max-width:640px;margin:0 auto 22px" class="lsg-search-row">
+          <div style="flex:1;position:relative">
+            <span style="position:absolute;left:16px;top:50%;transform:translateY(-50%);width:20px;height:20px;background:#8a8a8a;-webkit-mask:url(icons/search.svg) center/contain no-repeat;mask:url(icons/search.svg) center/contain no-repeat"></span>
+            <input value="{{ query }}" onInput="{{ setQuery }}" placeholder="Search all of LifeSG" style="width:100%;height:52px;padding:0 16px 0 46px;font-family:inherit;font-size:17px;border:1px solid var(--border,#DDE1E2);border-radius:6px;color:var(--text,#282828);outline:none" style-focus="border-color:var(--primary-50,#1768BE);box-shadow:0 0 0 2px var(--bg-primary-subtler,#E7F0FA)">
+          </div>
+          <x-import component-from-global-scope="LifeSGDesignSystem_15079f.Button" hint-size="auto,52px" style="height:52px;padding:0 28px">Search</x-import>
+        </div>
+
+        <!-- suggestion chips -->
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:760px;margin:0 auto" class="lsg-chips">
+          <sc-for list="{{ chips }}" as="c" hint-placeholder-count="6">
+            <a href="#" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border,#DDE1E2);border-radius:6px;padding:9px 16px;font-size:15px;font-weight:600;color:var(--text,#282828);text-decoration:none;box-shadow:var(--shadow-xs-subtle,0 1px 2px rgba(104,104,104,.14))" style-hover="border-color:var(--primary-50,#1768BE)">{{ c.label }}<sc-if value="{{ c.isNew }}" hint-placeholder-val="{{ false }}"><span style="font-size: 10px; font-weight: 700; letter-spacing: .5px; color: var(--primary-40); border: 1px solid var(--brand-50,#BF3431); border-radius: 3px; padding: 1px 5px; position: static; padding-left: 4px; padding-right: 4px; display: grid; align-items: center; background-color: var(--primary-95); border-color: var(--primary-40); line-height: 0; width: 37px; height: 24px">NEW</span></sc-if></a>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero illustration band -->
+    <img src="assets/hero-band.svg" alt="" class="lsg-band-desktop" style="display:block;width:100%;height:auto;margin-top:24px">
+    <img src="assets/hero-band-tablet.svg" alt="" class="lsg-band-tablet" style="width:100%;height:auto;margin-top:24px">
+    <img src="assets/hero-band-mobile.svg" alt="" class="lsg-band-mobile" style="width:100%;height:auto;margin-top:24px">
+  </section>
+
+  <!-- Popular on LifeSG -->
+  <section style="max-width:1200px;margin:0 auto;padding:64px 24px 12px" class="lsg-section">
+    <h2 class="lsg-section-h2" style="font-size:30px;font-weight:700;color:var(--text,#282828);margin:0 0 8px">Popular on LifeSG</h2>
+    <p style="font-size:18px;color:#5b5b5b;margin:0 0 28px">Find information and services for different life moments and situations.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0 48px" class="lsg-grid-3">
+      <sc-for list="{{ popular }}" as="p" hint-placeholder-count="9">
+        <a href="#" style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--border,#DDE1E2);text-decoration:none">
+          <span class="lsg-link" style="font-size:18px;font-weight:600">{{ p }}</span>
+          <span style="flex-shrink:0;width:20px;height:20px;background:var(--text-primary,#1768BE);-webkit-mask:url(icons/chevron-right.svg) center/contain no-repeat;mask:url(icons/chevron-right.svg) center/contain no-repeat"></span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Life moments -->
+  <section style="max-width:1200px;margin:0 auto;padding:52px 24px 8px" class="lsg-section">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:8px" class="lsg-moments-head">
+      <div>
+        <h2 class="lsg-section-h2" style="font-size:30px;font-weight:700;color:var(--text,#282828);margin:0 0 8px">Life moments</h2>
+        <p style="font-size:18px;color:#5b5b5b;margin:0">Find information and services for different life moments and situations.</p>
+      </div>
+      <a href="#" class="lsg-link" style="display:inline-flex;align-items:center;gap:6px;font-size:17px;font-weight:700;white-space:nowrap">See more life moments
+        <span style="width:18px;height:18px;background:currentColor;-webkit-mask:url(icons/chevron-right.svg) center/contain no-repeat;mask:url(icons/chevron-right.svg) center/contain no-repeat"></span>
+      </a>
+    </div>
+
+    <div style="overflow:hidden;padding:24px 0" ref="{{ carouselRef }}">
+      <div style="display:flex;gap:24px;transition:translate .4s var(--ease-default,cubic-bezier(.45,.05,.55,.95))" ref="{{ trackRef }}">
+        <sc-for list="{{ moments }}" as="m" hint-placeholder-count="6">
+          <a href="#" style="flex:0 0 340px;width:340px;background:#fff;border:1px solid var(--border,#DDE1E2);border-radius:8px;box-shadow:var(--shadow-sm-subtle,0 2px 4px rgba(104,104,104,.24));padding:32px;text-decoration:none;transition:box-shadow .2s,transform .2s" style-hover="transform:translateY(-2px);box-shadow:var(--shadow-md-subtle,0 8px 16px rgba(104,104,104,.2))">
+            <span style="display:inline-block;width:40px;height:40px;margin-bottom:24px;background:{{ m.color }};-webkit-mask:url({{ m.iconUrl }}) center/contain no-repeat;mask:url({{ m.iconUrl }}) center/contain no-repeat"></span>
+            <div style="font-size:22px;font-weight:700;color:var(--text,#282828);margin-bottom:12px">{{ m.title }}</div>
+            <div style="font-size:17px;line-height:1.55;color:#5b5b5b">{{ m.desc }}</div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+
+    <!-- carousel controls -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 4px; background-color: var(--neutral-100)">
+      <button onClick="{{ prevMoment }}" aria-label="Previous" style="width:40px;height:40px;border:1px solid var(--border,#DDE1E2);background:#fff;border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center" style-hover="background:var(--bg-hover-neutral,#F0F0F0)">
+        <span style="width:18px;height:18px;background:var(--text,#282828);-webkit-mask:url(icons/chevron-left.svg) center/contain no-repeat;mask:url(icons/chevron-left.svg) center/contain no-repeat"></span>
+      </button>
+      <div style="display:flex;align-items:center;gap:6px">
+        <sc-for list="{{ dots }}" as="dot" hint-placeholder-count="6">
+          <button onClick="{{ dot.go }}" aria-label="Go to slide" style="border:none;background:transparent;cursor:pointer;padding:6px 2px;display:inline-flex">
+            <sc-if value="{{ dot.active }}" hint-placeholder-val="{{ true }}"><span style="display:block;width:26px;height:8px;border-radius:4px;background:var(--bg-primary,#1768BE)"></span></sc-if>
+            <sc-if value="{{ dot.inactive }}" hint-placeholder-val="{{ false }}"><span style="display:block;width:8px;height:8px;border-radius:4px;background:var(--neutral-90,#DDE1E2)"></span></sc-if>
+          </button>
+        </sc-for>
+      </div>
+      <button onClick="{{ nextMoment }}" aria-label="Next" style="width:40px;height:40px;border:1px solid var(--border,#DDE1E2);background:#fff;border-radius:6px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center" style-hover="background:var(--bg-hover-neutral,#F0F0F0)">
+        <span style="width:18px;height:18px;background:var(--text,#282828);-webkit-mask:url(icons/chevron-right.svg) center/contain no-repeat;mask:url(icons/chevron-right.svg) center/contain no-repeat"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Topics -->
+  <section style="background:linear-gradient(180deg,#FFFFFF 0%,#F4F9FC 100%)">
+    <div style="max-width:1200px;margin:0 auto;padding:64px 24px 40px" class="lsg-container">
+      <h2 class="lsg-section-h2" style="font-size:30px;font-weight:700;color:var(--text,#282828);margin:0 0 8px">Topics</h2>
+      <p style="font-size:18px;color:#5b5b5b;margin:0 0 32px">Find information and services based on topics</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px 48px" class="lsg-grid-3">
+        <sc-for list="{{ topics }}" as="t" hint-placeholder-count="6">
+          <a href="#" style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:22px 0;border-bottom:1px solid var(--border,#DDE1E2);text-decoration:none">
+            <div>
+              <div class="lsg-link" style="font-size:20px;font-weight:700;margin-bottom:8px">{{ t.title }}</div>
+              <div style="font-size:16px;line-height:1.5;color:#5b5b5b">{{ t.desc }}</div>
+            </div>
+            <span style="flex-shrink:0;width:20px;height:20px;margin-top:4px;background:var(--text-primary,#1768BE);-webkit-mask:url(icons/chevron-right.svg) center/contain no-repeat;mask:url(icons/chevron-right.svg) center/contain no-repeat"></span>
+          </a>
+        </sc-for>
+      </div>
+      <p style="text-align:center;font-style:italic;color:#8a8a8a;font-size:17px;margin:40px 0 0">More topics coming soon...</p>
+    </div>
+
+    <!-- topics illustration band -->
+    <img src="assets/topics-band.svg" alt="" class="lsg-band-desktop" style="display:block;width:100%;height:auto;margin-top:24px">
+    <img src="assets/topics-band-tablet.svg" alt="" class="lsg-band-tablet" style="width:100%;height:auto;margin-top:24px">
+    <img src="assets/topics-band-mobile.svg" alt="" class="lsg-band-mobile" style="width:100%;height:auto;margin-top:24px">
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#F9F9F9;border-top:1px solid var(--border,#DDE1E2)">
+    <div style="position:relative;max-width:1440px;margin:0 auto">
+      <img src="assets/footer-desktop.svg" alt="LifeSG footer" class="lsg-band-desktop" style="display:block;width:100%;height:auto">
+      <div class="lsg-band-desktop" style="position:absolute;inset:0">
+        <a class="lsg-footer-hit" href="#" aria-label="Home" style="position:absolute;left:3.19%;top:41.37%;width:3.40%;height:3.98%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="News and media" style="position:absolute;left:21.46%;top:41.37%;width:8.96%;height:3.98%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Services" style="position:absolute;left:3.13%;top:48.45%;width:4.58%;height:3.98%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="About us" style="position:absolute;left:21.32%;top:48.45%;width:5.07%;height:3.98%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Download on the App Store" style="position:absolute;left:66.94%;top:48.45%;width:13.82%;height:14.38%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Get it on Google Play" style="position:absolute;left:82.85%;top:48.45%;width:13.82%;height:14.38%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Guides" style="position:absolute;left:3.19%;top:55.53%;width:3.89%;height:4.87%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Frequently asked questions" style="position:absolute;left:21.46%;top:55.53%;width:14.72%;height:4.87%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="LifeSG app" style="position:absolute;left:3.19%;top:62.61%;width:5.90%;height:3.98%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Get in touch with us" style="position:absolute;left:21.39%;top:62.61%;width:10.83%;height:3.98%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Blog" style="position:absolute;left:3.19%;top:69.69%;width:2.57%;height:3.98%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Sign up for our newsletter" style="position:absolute;left:21.39%;top:69.69%;width:14.03%;height:3.98%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Privacy Statement" style="position:absolute;left:3.19%;top:91.81%;width:7.43%;height:4.87%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Terms of Use" style="position:absolute;left:11.39%;top:91.81%;width:5.56%;height:4.87%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Report Vulnerability" style="position:absolute;left:17.85%;top:91.81%;width:9.44%;height:4.87%"></a>
+      </div>
+
+      <img src="assets/footer-tablet.svg" alt="LifeSG footer" class="lsg-band-tablet" style="width:100%;height:auto">
+      <div class="lsg-band-tablet" style="position:absolute;inset:0">
+        <a class="lsg-footer-hit" href="#" aria-label="Home" style="position:absolute;left:2.86%;top:23.48%;width:6.38%;height:3.04%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="News and media" style="position:absolute;left:51.82%;top:23.48%;width:16.80%;height:3.04%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Services" style="position:absolute;left:2.73%;top:28.89%;width:8.59%;height:3.04%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="About us" style="position:absolute;left:51.69%;top:28.89%;width:9.38%;height:3.04%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Guides" style="position:absolute;left:2.86%;top:34.29%;width:7.29%;height:3.72%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Frequently asked questions" style="position:absolute;left:51.82%;top:34.29%;width:27.60%;height:3.72%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="LifeSG app" style="position:absolute;left:2.86%;top:39.70%;width:11.07%;height:3.72%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Get in touch with us" style="position:absolute;left:51.82%;top:39.70%;width:20.18%;height:3.72%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Blog" style="position:absolute;left:2.86%;top:45.10%;width:4.82%;height:3.72%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Sign up for our newsletter" style="position:absolute;left:51.69%;top:45.10%;width:26.30%;height:3.72%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Download on the App Store" style="position:absolute;left:2.86%;top:59.97%;width:21.22%;height:9.46%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Get it on Google Play" style="position:absolute;left:25.65%;top:59.97%;width:21.22%;height:9.46%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Privacy Statement" style="position:absolute;left:2.86%;top:77.53%;width:13.93%;height:3.04%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Terms of Use" style="position:absolute;left:2.73%;top:82.26%;width:10.42%;height:2.53%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Report Vulnerability" style="position:absolute;left:2.86%;top:86.66%;width:17.71%;height:3.38%"></a>
+      </div>
+
+      <img src="assets/footer-mobile.svg" alt="LifeSG footer" class="lsg-band-mobile" style="width:100%;height:auto">
+      <div class="lsg-band-mobile" style="position:absolute;inset:0">
+        <a class="lsg-footer-hit" href="#" aria-label="Home" style="position:absolute;left:5.87%;top:20.32%;width:13.07%;height:2.49%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="News and media" style="position:absolute;left:53.87%;top:20.18%;width:34.40%;height:2.78%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Services" style="position:absolute;left:5.60%;top:25.00%;width:17.60%;height:2.63%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="About us" style="position:absolute;left:53.33%;top:24.85%;width:19.47%;height:2.78%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Guides" style="position:absolute;left:5.87%;top:29.53%;width:14.93%;height:2.78%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Frequently asked questions" style="position:absolute;left:53.60%;top:29.53%;width:35.47%;height:6.73%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="LifeSG app" style="position:absolute;left:5.87%;top:34.21%;width:22.67%;height:3.22%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Get in touch with us" style="position:absolute;left:53.60%;top:37.72%;width:31.47%;height:6.14%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Blog" style="position:absolute;left:5.87%;top:38.89%;width:9.87%;height:3.22%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Sign up for our newsletter" style="position:absolute;left:53.60%;top:45.91%;width:22.67%;height:6.29%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Download on the App Store" style="position:absolute;left:5.87%;top:62.87%;width:43.47%;height:7.46%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Get it on Google Play" style="position:absolute;left:52.53%;top:62.87%;width:43.47%;height:7.46%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Privacy Statement" style="position:absolute;left:5.87%;top:77.63%;width:28.53%;height:2.49%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Terms of Use" style="position:absolute;left:5.60%;top:81.58%;width:21.33%;height:2.19%"></a>
+        <a class="lsg-footer-hit" href="#" aria-label="Report Vulnerability" style="position:absolute;left:5.87%;top:85.82%;width:31.47%;height:2.49%"></a>
+      </div>
+    </div>
+  </footer>
+
+</sc-if>
+
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;recName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Joshua&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Recommended for you&quot;},&quot;recPanel&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;None&quot;,&quot;Tinted&quot;,&quot;Gradient&quot;],&quot;default&quot;:&quot;Tinted&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Recommended for you&quot;},&quot;recShowMatch&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Recommended for you&quot;},&quot;recAccent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#1768BE&quot;,&quot;options&quot;:[&quot;#1768BE&quot;,&quot;#7A5BA8&quot;,&quot;#257645&quot;,&quot;#C0397B&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Recommended for you&quot;}}">
+class Component extends DCLogic {
+  state = { lang: "English", scamOpen: true, dashScamOpen: true, moment: 0, menu: null, query: "", mobileNav: false, viewport: 1152, view: "home" };
+
+  step = 364; // 340 card + 24 gap
+  cardW = 340;
+  gap = 24;
+
+  componentDidMount() {
+    this._measure = () => {
+      const el = this._carousel;
+      if (el && el.clientWidth) this.setState({ viewport: el.clientWidth });
+    };
+    this._measure();
+    window.addEventListener("resize", this._measure);
+  }
+  componentWillUnmount() {
+    if (this._measure) window.removeEventListener("resize", this._measure);
+  }
+  _animateScroll(target) {
+    const el = this._carousel;
+    if (!el) return;
+    this._offset = target;
+    const start = el.scrollLeft;
+    if (Math.abs(target - start) < 1) { el.scrollLeft = target; return; }
+    if (this._raf) cancelAnimationFrame(this._raf);
+    const t0 = performance.now();
+    const dur = 400;
+    const ease = (t) => 0.5 - 0.5 * Math.cos(Math.PI * t);
+    const tick = (now) => {
+      const p = Math.min(1, (now - t0) / dur);
+      el.scrollLeft = start + (target - start) * ease(p);
+      if (p < 1) this._raf = requestAnimationFrame(tick);
+    };
+    this._raf = requestAnimationFrame(tick);
+  }
+
+  renderVals() {
+    const s = this.state;
+    const langLabels = ["English", "中文", "Melayu", "தமிழ்"];
+    const langs = langLabels.map((label) => ({
+      label,
+      on: s.lang === label,
+      off: s.lang !== label,
+      pick: () => this.setState({ lang: label }),
+    }));
+
+    const chipDefs = [
+      { label: "Large Families Scheme" },
+      { label: "Baby Bonus Scheme" },
+      { label: "Child LifeSG Credits" },
+      { label: "Budget 2026", isNew: true },
+      { label: "myACP: Prepare an Advance Care Plan Online", isNew: true },
+      { label: "Lasting Power of Attorney" },
+    ];
+    const chips = chipDefs.map((c) => ({ label: c.label, isNew: !!c.isNew }));
+
+    const popular = [
+      "View your benefits statement",
+      "Register your child's birth",
+      "Search for a preschool",
+      "Manage Shared Parental Leave (SPL) sharing arrangement",
+      "Apply for Baby Bonus",
+      "Report an issue in your neighbourhood",
+      "Help neighbour",
+      "Book public facilities and spaces",
+    ];
+
+    const iconUrl = (name) => (window.__resources && window.__resources["icon_" + name]) || ("icons/" + name + ".svg");
+    const moments = [
+      { icon: "baby", color: "#C0397B", title: "When your baby is born", desc: "What you must do after giving birth, and other resources to support you and your newborn." },
+      { icon: "flower-2", color: "#7A5BA8", title: "When you lose a loved one", desc: "Find out more about what to do after the immediate passing of a loved one, explore other topics related to death." },
+      { icon: "heart-handshake", color: "#BF3431", title: "Becoming a caregiver", desc: "Learn how to care for a loved one, access caregiver support, training, and financial schemes." },
+      { icon: "briefcase", color: "#1768BE", title: "Starting work", desc: "Understand your employment rights, CPF, and the support available as you begin your career." },
+      { icon: "house", color: "#257645", title: "Buying a home", desc: "Plan your HDB or resale purchase, grants, and the steps to owning your first home." },
+      { icon: "graduation-cap", color: "#5B62A7", title: "Going to school", desc: "Register for a preschool or primary school and find education support for your child." },
+      { icon: "heart", color: "#C0397B", title: "Getting married", desc: "Register your marriage, plan your ceremony, and access schemes for newlyweds." },
+      { icon: "palmtree", color: "#98590C", title: "Planning for retirement", desc: "Make sense of CPF payouts, healthcare, and how to prepare for your golden years." },
+    ];
+
+    const topics = [
+      { title: "Care and support services", desc: "Access disability, eldercare, mental health, and caregiver support services." },
+      { title: "Death and bereavement", desc: "Get guidance on death registration, funeral arrangements, and bereavement support." },
+      { title: "Family and parenting", desc: "Access parenting resources, childcare support, and family benefits." },
+      { title: "Civic duties and National Service", desc: "Find information on NS enlistment, deferment, and support for NSmen." },
+      { title: "End-of-life and estate planning", desc: "Plan ahead for care decisions, wills, and estate matters." },
+    ];
+
+    const viewport = s.viewport || 1152;
+    const perView = Math.max(1, Math.floor((viewport + this.gap) / (this.cardW + this.gap)));
+    const maxIndex = Math.max(0, moments.length - perView);
+    const moment = Math.min(s.moment, maxIndex);
+    const trackWidth = moments.length * this.cardW + (moments.length - 1) * this.gap;
+    const maxScroll = Math.max(0, trackWidth - viewport);
+    const offset = Math.min(moment * this.step, maxScroll);
+    this._offset = offset;
+    const goTo = (idx) => {
+      const clamped = Math.max(0, Math.min(maxIndex, idx));
+      const target = Math.min(clamped * this.step, maxScroll);
+      this.setState({ moment: clamped });
+      this._animateScroll(target);
+    };
+    const dots = [];
+    for (let i = 0; i <= maxIndex; i++) {
+      dots.push({ active: i === moment, inactive: i !== moment, go: () => goTo(i) });
+    }
+
+    const momentsResolved = moments.map((m) => Object.assign({}, m, { iconUrl: iconUrl(m.icon) }));
+    const lifeMenu = ["When your baby is born", "When you lose a loved one", "Becoming a caregiver", "Starting work", "Buying a home", "Getting married"];
+    const topicsMenu = topics.map((t) => t.title);
+
+    const tasks = [
+      { due: "Due in 3 days", tagColor: "red", title: "Lasting power of attorney", detail: "Draft expires on 23 August 2026" },
+      { due: "Due in 5 days", tagColor: "red", title: "Advance Care Planning", detail: "Draft expires on 25 August 2026" },
+      { due: "Due soon", tagColor: "yellow", title: "Parking fines", detail: "Deadline on 23 September 2026" },
+    ];
+
+    const interactionDefs = [
+      { title: "Updated personal profile", date: "31 May 2026" },
+      { title: "Paid parking fines", date: "21 May 2026" },
+      { title: "Continue with ACP draft", date: "21 May 2026" },
+      { title: "Completed wills learning", date: "21 May 2026" },
+      { title: "Started ACP form", date: "21 April 2026" },
+    ];
+    const interactions = interactionDefs.map((it, i) => ({ ...it, hasLine: i < interactionDefs.length - 1 }));
+
+    const credits = [
+      { label: "SG Culture pass", amount: "100", note: "Expiring 31 Dec 2025\n\n\n\n" },
+      { label: "Skillsfuture credits", amount: "4,500", note: "Some credits expires on 30 Jun 2026" },
+      { label: "CDC vouchers", amount: "500", note: "Jan 2025 CDC payout expires 31 Dec 2026" },
+    ];
+
+    const journeyDefs = [
+      { icon: "house", title: "Navigating home ownership", desc: "Explore your grant eligibility and property financing options with our guided first-home acquisition pathway.", badgeType: "primary" },
+      { icon: "flower-2", title: "Start legacy planning", desc: "Start Legacy planning to put your mind at ease when difficult situation happens, such as death and when you lose mental capacity.", badgeType: "primary" },
+      { icon: "briefcase", title: "Wealth initiatives", desc: "Build your financial security through CPF and other initiatives designed to accumulate long-term wealth.", badgeType: "primary" },
+      { icon: "graduation-cap", title: "Learning and upskilling", desc: "Find courses that explore your personal interest or consider upskill to pivot your professional career.", badgeType: "warning" },
+    ];
+    const badgeStyles = {
+      primary: { color: "var(--text-primary,#1768BE)", bg: "var(--bg-primary-subtlest,#E7F0FA)" },
+      warning: { color: "var(--text-warning,#98590C)", bg: "var(--bg-warning-subtle,#FBF3E7)" },
+    };
+    const recReasons = [
+      "Recent HFE application",
+      "Recently started on LPA form",
+      "Popular in your bracket",
+      "Skillsfuture credits expiring",
+    ];
+    const hexTint = (hex, a) => {
+      const h = String(hex).replace("#", "");
+      const n = h.length === 3 ? h.split("").map((c) => c + c).join("") : h;
+      const r = parseInt(n.slice(0, 2), 16), g = parseInt(n.slice(2, 4), 16), b = parseInt(n.slice(4, 6), 16);
+      return "rgba(" + r + "," + g + "," + b + "," + a + ")";
+    };
+    const recAccent = this.props.recAccent || "#1768BE";
+    const recName = this.props.recName || "Joshua";
+    const recShowMatch = this.props.recShowMatch ?? true;
+    const recPanel = this.props.recPanel || "Tinted";
+    const journeys = journeyDefs.map((j, i) => ({
+      ...j,
+      color: recAccent,
+      tint: hexTint(recAccent, 0.1),
+      iconUrl: iconUrl(j.icon),
+      badgeColor: badgeStyles[j.badgeType].color,
+      badgeBg: badgeStyles[j.badgeType].bg,
+      showMatch: recShowMatch,
+      reason: recReasons[i],
+      matchIconUrl: iconUrl("sparkles"),
+    }));
+    const recPanelStyle = recPanel === "Gradient"
+      ? { marginTop: "36px", padding: "28px 30px", borderRadius: "16px", border: "1px solid " + hexTint(recAccent, 0.35), background: "linear-gradient(135deg," + hexTint(recAccent, 0.16) + " 0%, #FFFFFF 72%)" }
+      : recPanel === "Tinted"
+      ? { marginTop: "36px", padding: "28px 30px", borderRadius: "16px", border: "1px solid " + hexTint(recAccent, 0.28), background: hexTint(recAccent, 0.06) }
+      : { marginTop: "36px" };
+    const recEyebrowStyle = { display: "inline-flex", alignItems: "center", gap: "7px", fontSize: "12.5px", fontWeight: 700, letterSpacing: ".5px", textTransform: "uppercase", color: recAccent, background: hexTint(recAccent, 0.12), borderRadius: "999px", padding: "5px 13px 5px 10px", marginBottom: "12px" };
+    const recSparkUrl = iconUrl("sparkles");
+    const recSubtitle = "Suggested based on recent activity and what others similar to your profile are embarking on";
+
+    return {
+      langs,
+      chips,
+      popular,
+      moments: momentsResolved,
+      topics,
+      dots,
+      query: s.query,
+      setQuery: (e) => this.setState({ query: e.target.value }),
+      scamOpen: s.scamOpen,
+      closeScam: () => this.setState({ scamOpen: false }),
+      trackRef: (el) => { this._track = el; },
+      prevMoment: () => goTo(moment - 1),
+      nextMoment: () => goTo(moment + 1),
+      toggleLife: () => this.setState((p) => ({ menu: p.menu === "life" ? null : "life" })),
+      toggleTopics: () => this.setState((p) => ({ menu: p.menu === "topics" ? null : "topics" })),
+      menuOpen: s.menu !== null,
+      menuItems: s.menu === "topics" ? topicsMenu : lifeMenu,
+      lifeCaret: s.menu === "life" ? "rotate(180deg)" : "rotate(0deg)",
+      topicsCaret: s.menu === "topics" ? "rotate(180deg)" : "rotate(0deg)",
+      carouselRef: (el) => { this._carousel = el; if (el) el.scrollLeft = this._offset || 0; },
+      mobileNavOpen: s.mobileNav,
+      toggleMobileNav: () => this.setState((p) => ({ mobileNav: !p.mobileNav })),
+      hamburgerIconUrl: iconUrl(s.mobileNav ? "x" : "menu"),
+      footerA: ["Home", "Services", "Guides", "LifeSG app", "Blog"],
+      footerB: ["News and media", "About us", "Frequently asked questions", "Get in touch with us", "Sign up for our newsletter"],
+      isHome: s.view === "home",
+      isDashboard: s.view === "dashboard",
+      goToDashboard: () => { window.location.href = "MyLifeSG-Dashboard.dc.html"; },
+      goToHome: (e) => { if (e) e.preventDefault(); this.setState({ view: "home" }); },
+      dashScamOpen: s.dashScamOpen,
+      closeDashScam: () => this.setState({ dashScamOpen: false }),
+      tasks,
+      interactions,
+      credits,
+      recPanelStyle,
+      recEyebrowStyle,
+      recSparkUrl,
+      recSubtitle,
+      journeys,
+    };
+  }
+}
+</script>
+</body>
+</html>

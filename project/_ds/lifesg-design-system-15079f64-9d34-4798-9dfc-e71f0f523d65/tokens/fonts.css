@@ -1,0 +1,8 @@
+/* ============================================================
+   LifeSG — Webfont: Open Sans
+   The LifeSG theme ships Open Sans (300/400/600/700, normal + italic).
+   Loaded here from Google Fonts. The production app serves it from
+   https://assets.life.gov.sg/react-design-system/v3/css/open-sans.css
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap");

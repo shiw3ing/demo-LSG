@@ -1,0 +1,81 @@
+/* ============================================================
+   LifeSG — Typography tokens
+   Source: /theme/font-spec (default-font-spec-set) + /theme/font
+   Typeface: Open Sans across headings, body and form text.
+   Sizes are in rem; base font-size is 18px (body-baseline 1.125rem).
+   ============================================================ */
+
+:root {
+    /* ---------- Families ---------- */
+    --font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-heading: var(--font-family);
+    --font-body: var(--font-family);
+
+    /* ---------- Weights ---------- */
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* ---------- Heading sizes ---------- */
+    --heading-size-xxl: 3rem;      /* 48px */
+    --heading-size-xl: 2.5rem;     /* 40px */
+    --heading-size-lg: 2rem;       /* 32px */
+    --heading-size-md: 1.625rem;   /* 26px */
+    --heading-size-sm: 1.375rem;   /* 22px */
+    --heading-size-xs: 1.125rem;   /* 18px */
+
+    --heading-lh-xxl: 3.5rem;
+    --heading-lh-xl: 3rem;
+    --heading-lh-lg: 2.5rem;
+    --heading-lh-md: 2.25rem;
+    --heading-lh-sm: 1.75rem;
+    --heading-lh-xs: 1.625rem;
+
+    --heading-ls-xxl: -0.035rem;
+    --heading-ls-xl: -0.02rem;
+    --heading-ls-lg: -0.02rem;
+    --heading-ls-md: 0rem;
+    --heading-ls-sm: 0rem;
+    --heading-ls-xs: 0rem;
+
+    /* ---------- Body sizes ---------- */
+    --body-size-baseline: 1.125rem; /* 18px — default body */
+    --body-size-md: 1rem;           /* 16px */
+    --body-size-sm: 0.875rem;       /* 14px */
+    --body-size-xs: 0.75rem;        /* 12px */
+
+    --body-lh-baseline: 1.625rem;
+    --body-lh-md: 1.5rem;
+    --body-lh-sm: 1.25rem;
+    --body-lh-xs: 1.25rem;
+
+    --body-ls-baseline: 0rem;
+    --body-ls-md: 0.009rem;
+    --body-ls-sm: 0.008rem;
+    --body-ls-xs: 0.008rem;
+
+    /* ---------- Form text ---------- */
+    --form-label-size: 1rem;
+    --form-label-lh: 1.375rem;
+    --form-description-size: 0.875rem;
+    --form-description-lh: 1.25rem;
+}
+
+/* ============================================================
+   Type-style helper classes — mirror the library's Font presets.
+   Apply directly, e.g. <h1 class="ds-heading-xl">. Weight suffix
+   defaults to semibold for headings, regular for body.
+   ============================================================ */
+
+.ds-heading-xxl { font-family: var(--font-heading); font-size: var(--heading-size-xxl); line-height: var(--heading-lh-xxl); letter-spacing: var(--heading-ls-xxl); font-weight: var(--weight-semibold); }
+.ds-heading-xl  { font-family: var(--font-heading); font-size: var(--heading-size-xl);  line-height: var(--heading-lh-xl);  letter-spacing: var(--heading-ls-xl);  font-weight: var(--weight-semibold); }
+.ds-heading-lg  { font-family: var(--font-heading); font-size: var(--heading-size-lg);  line-height: var(--heading-lh-lg);  letter-spacing: var(--heading-ls-lg);  font-weight: var(--weight-semibold); }
+.ds-heading-md  { font-family: var(--font-heading); font-size: var(--heading-size-md);  line-height: var(--heading-lh-md);  letter-spacing: var(--heading-ls-md);  font-weight: var(--weight-semibold); }
+.ds-heading-sm  { font-family: var(--font-heading); font-size: var(--heading-size-sm);  line-height: var(--heading-lh-sm);  letter-spacing: var(--heading-ls-sm);  font-weight: var(--weight-semibold); }
+.ds-heading-xs  { font-family: var(--font-heading); font-size: var(--heading-size-xs);  line-height: var(--heading-lh-xs);  letter-spacing: var(--heading-ls-xs);  font-weight: var(--weight-semibold); }
+
+.ds-body-baseline { font-family: var(--font-body); font-size: var(--body-size-baseline); line-height: var(--body-lh-baseline); letter-spacing: var(--body-ls-baseline); font-weight: var(--weight-regular); }
+.ds-body-md { font-family: var(--font-body); font-size: var(--body-size-md); line-height: var(--body-lh-md); letter-spacing: var(--body-ls-md); font-weight: var(--weight-regular); }
+.ds-body-sm { font-family: var(--font-body); font-size: var(--body-size-sm); line-height: var(--body-lh-sm); letter-spacing: var(--body-ls-sm); font-weight: var(--weight-regular); }
+.ds-body-xs { font-family: var(--font-body); font-size: var(--body-size-xs); line-height: var(--body-lh-xs); letter-spacing: var(--body-ls-xs); font-weight: var(--weight-regular); }

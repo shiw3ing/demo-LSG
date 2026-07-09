@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/effects.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/tokens/base.css">
+  <link rel="stylesheet" href="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/styles.css">
+  <script src="_ds/lifesg-design-system-15079f64-9d34-4798-9dfc-e71f0f523d65/_ds_bundle.js"></script>
+  <meta name="ext-resource-dependency" content="icons/heart.svg" data-resource-id="icon_heart">
+  <meta name="ext-resource-dependency" content="icons/mail.svg" data-resource-id="icon_mail">
+  <meta name="ext-resource-dependency" content="icons/file-text.svg" data-resource-id="icon_file-text">
+  <meta name="ext-resource-dependency" content="icons/layout-grid.svg" data-resource-id="icon_layout-grid">
+  <style>
+    body{margin:0;background:#fff;font-family:var(--font-family,"Open Sans",system-ui,sans-serif);color:var(--text,#282828)}
+    *{box-sizing:border-box}
+    a{color:inherit}
+    .lsg-link{color:var(--text-primary,#1768BE);text-decoration:none}
+    .lsg-link:hover{text-decoration:underline}
+    .lsg-mail{transition:background .15s ease}
+    .lsg-mail:hover{background:var(--bg-hover-neutral,#F2F4F5)}
+  </style>
+</helmet>
+
+<div style="width:100%;background-color:var(--neutral-100)">
+  <!-- Government identifier bar -->
+  <div style="background:#F0F0F0;font-size:13px;color:#5b5b5b">
+    <div style="max-width:1200px;margin:0 auto;padding:7px 24px;display:flex;align-items:center;gap:8px">
+      <span style="display:inline-block;width:16px;height:16px;background:var(--brand-50,#BF3431);-webkit-mask:url(icons/flag.svg) center/contain no-repeat;mask:url(icons/flag.svg) center/contain no-repeat"></span>
+      <span>A Singapore Government Agency Website</span>
+      <a href="#" class="lsg-link" style="display:inline-flex;align-items:center;gap:4px;font-weight:600">How to identify
+        <span style="display:inline-block;width:14px;height:14px;background:currentColor;-webkit-mask:url(icons/chevron-down.svg) center/contain no-repeat;mask:url(icons/chevron-down.svg) center/contain no-repeat"></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Dashboard header -->
+  <header style="background:#fff;border-bottom:1px solid var(--border,#DDE1E2)">
+    <div style="max-width:1440px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between">
+      <div style="font-size:26px;font-weight:700;color:var(--text,#282828)">My Life<span style="color:var(--brand-50,#BF3431)">SG</span></div>
+      <div style="display:flex;align-items:center;gap:28px">
+        <a href="LifeSG-Homepage.dc.html" class="lsg-link" style="font-size:16px;font-weight:600">Return to LifeSG home</a>
+        <div style="width:1px;height:24px;background:var(--border,#DDE1E2)"></div>
+        <span style="position:relative;display:inline-flex">
+          <span style="display:inline-block;width:24px;height:24px;background:#282828;-webkit-mask:url(icons/bell.svg) center/contain no-repeat;mask:url(icons/bell.svg) center/contain no-repeat"></span>
+          <span style="position:absolute;top:-6px;right:-8px;display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--bg-error-strong,#CB2213);color:#fff;font-size:11px;font-weight:700">8</span>
+        </span>
+        <x-import component-from-global-scope="LifeSGDesignSystem_15079f.Avatar" name="Maria" hint-size="40px,40px"></x-import>
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width:1440px;margin:0 auto;display:flex;align-items:stretch">
+    <!-- Sidebar -->
+    <nav style="width: 280px; flex-shrink: 0; box-sizing: content-box; background: var(--bg-primary-subtlest,#F7F9FF); margin-left: calc(-1 * max(0px, (100vw - 1440px) / 2)); padding: 28px 24px; padding-left: calc(24px + max(0px, (100vw - 1440px) / 2)); min-height: calc(100vh - 130px)">
+      <a href="MyLifeSG-Dashboard.dc.html" style="display:flex;align-items:center;gap:12px;padding:10px 0;text-decoration:none;color:var(--text,#282828);font-size:17px">
+        <span style="width:20px;height:20px;background:#5b5b5b;-webkit-mask:url(icons/layout-grid.svg) center/contain no-repeat;mask:url(icons/layout-grid.svg) center/contain no-repeat"></span>Dashboard
+      </a>
+      <div style="height:1px;background:var(--border,#DDE1E2);margin:16px 0"></div>
+      <div style="font-size:14px;font-weight:700;color:#8a8a8a;letter-spacing:.3px;margin:8px 0 4px">Action centre</div>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 0;text-decoration:none;color:var(--text-primary,#1768BE);font-size:17px;font-weight:700">
+        <span style="width:20px;height:20px;background:currentColor;-webkit-mask:url(icons/mail.svg) center/contain no-repeat;mask:url(icons/mail.svg) center/contain no-repeat"></span>Your mails
+        <span style="display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--bg-primary,#1768BE);color:#fff;font-size:11px;font-weight:700">8</span>
+      </a>
+      <a href="MyLifeSG-applications.dc.html" style="display:flex;align-items:center;gap:12px;padding:10px 0;text-decoration:none;color:var(--text,#282828);font-size:17px">
+        <span style="width:20px;height:20px;background:#5b5b5b;-webkit-mask:url(icons/file-text.svg) center/contain no-repeat;mask:url(icons/file-text.svg) center/contain no-repeat"></span>Application status
+        <span style="display: inline-block; width: 14px; height: 14px; border-radius: 999px; background-color: var(--icon-primary)"></span>
+      </a>
+      <div style="height:1px;background:var(--border,#DDE1E2);margin:16px 0"></div>
+      <div style="font-size:14px;font-weight:700;color:#8a8a8a;letter-spacing:.3px;margin:8px 0 4px">For you</div>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 0;text-decoration:none;color:var(--text,#282828);font-size:17px">
+        <span style="width:20px;height:20px;background:#5b5b5b;-webkit-mask:url(icons/heart.svg) center/contain no-repeat;mask:url(icons/heart.svg) center/contain no-repeat"></span>Your benefits
+      </a>
+      <a href="#" style="display:flex;align-items:center;gap:12px;padding:10px 0;text-decoration:none;color:var(--text,#282828);font-size:17px">
+        <span style="width:20px;height:20px;background:#5b5b5b;-webkit-mask:url(icons/file-text.svg) center/contain no-repeat;mask:url(icons/file-text.svg) center/contain no-repeat"></span>Your records
+      </a>
+    </nav>
+
+    <!-- Main content -->
+    <main style="flex:1;min-width:0;box-sizing:content-box;margin-right:calc(-1 * max(0px, (100vw - 1440px) / 2));padding:32px 40px 64px;padding-right:calc(40px + max(0px, (100vw - 1440px) / 2));background:#fff">
+<sc-if value="{{ isOpen }}" hint-placeholder-val="{{ false }}">
+        <!-- Mail detail view -->
+        <a href="#" onClick="{{ goBack }}" class="lsg-link" style="display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;margin-bottom:20px">
+          <span style="width:18px;height:18px;background:currentColor;-webkit-mask:url(icons/chevron-left.svg) center/contain no-repeat;mask:url(icons/chevron-left.svg) center/contain no-repeat"></span>Back to all mails
+        </a>
+        <div style="max-width:820px;background:#fff;border:1px solid var(--border,#DDE1E2);border-radius:8px;box-shadow:0 2px 4px rgba(104,104,104,.12);padding:36px 40px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <span style="font-size:14px;font-weight:700;color:var(--text-primary,#1768BE);text-transform:uppercase;letter-spacing:.3px">{{ open.agency }}</span>
+            <sc-if value="{{ open.pending }}" hint-placeholder-val="{{ false }}">
+              <x-import component-from-global-scope="LifeSGDesignSystem_15079f.Pill" hint-size="auto,auto" style="position: static; padding: 2px 12px; font-size: 12px; color: var(--text-warning,#98590C); border-color: var(--border-warning,#E4B571); background: var(--bg-warning-subtle,#FBF3E7); cursor: default">Action needed</x-import>
+            </sc-if>
+          </div>
+          <h1 style="font-size:26px;font-weight:700;color:var(--text,#282828);margin:0 0 8px;line-height:1.3">{{ open.subject }}</h1>
+          <div style="font-size:14px;color:#8a8a8a;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border,#DDE1E2)">Received {{ open.date }}</div>
+          <p style="font-size:17px;line-height:1.7;color:#3a3a3a;margin:0 0 28px">{{ open.body }}</p>
+          <sc-if value="{{ open.attachment }}" hint-placeholder-val="{{ false }}">
+            <a href="#" style="display:flex;align-items:center;gap:14px;text-decoration:none;background:var(--bg-strong,#F7F7F7);border:1px solid var(--border,#DDE1E2);border-radius:8px;padding:14px 18px;margin-bottom:28px;max-width:420px">
+              <span style="flex-shrink:0;width:36px;height:36px;border-radius:8px;background:var(--bg-error-subtle,#FBEAE8);display:inline-flex;align-items:center;justify-content:center">
+                <span style="width:18px;height:18px;background:var(--text-error,#CB2213);-webkit-mask:url(icons/file-text.svg) center/contain no-repeat;mask:url(icons/file-text.svg) center/contain no-repeat"></span>
+              </span>
+              <span style="flex:1;font-size:15px;font-weight:600;color:var(--text,#282828)">{{ open.attachment }}</span>
+              <span style="flex-shrink:0;width:20px;height:20px;background:#5b5b5b;-webkit-mask:url(icons/download.svg) center/contain no-repeat;mask:url(icons/download.svg) center/contain no-repeat"></span>
+            </a>
+          </sc-if>
+          <sc-if value="{{ open.pending }}" hint-placeholder-val="{{ false }}">
+            <x-import component-from-global-scope="LifeSGDesignSystem_15079f.Button" styleType="default" hint-size="auto,44px">Take action</x-import>
+          </sc-if>
+        </div>
+      </sc-if>
+
+      <div style="display:{{ listDisplay }}">
+      <h1 style="font-size:32px;font-weight:700;color:var(--text,#282828);margin:0 0 6px">Your mails</h1>
+      <p style="font-size:16px;color:#5b5b5b;margin:0 0 24px">Official letters and notices from government agencies. You have <strong style="color:var(--text,#282828)">{{ unreadLabel }}</strong> mails.</p>
+
+      <!-- Filter chips -->
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px">
+        <sc-for list="{{ filters }}" as="f" hint-placeholder-count="3">
+          <button onClick="{{ f.onClick }}" style="{{ f.style }}">{{ f.label }}</button>
+        </sc-for>
+      </div>
+
+      <!-- Mail list -->
+      <div style="background:#fff;border:1px solid var(--border,#DDE1E2);border-radius:8px;overflow:hidden;box-shadow:0 2px 4px rgba(104,104,104,.12)">
+        <sc-for list="{{ mails }}" as="m" hint-placeholder-count="6">
+          <a href="#" onClick="{{ m.onClick }}" class="lsg-mail" style="{{ m.rowStyle }}">
+            <span style="{{ m.unreadDotStyle }}"></span>
+            <div style="flex:1;min-width:0">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:3px">
+                <span style="font-size:13px;font-weight:700;color:var(--text-primary,#1768BE);text-transform:uppercase;letter-spacing:.3px">{{ m.agency }}</span>
+                <sc-if value="{{ m.pending }}" hint-placeholder-val="{{ false }}">
+                </sc-if>
+              </div>
+              <div style="font-size: 18px; color: var(--text,#282828); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600">{{ m.subject }}</div>
+              <div style="font-size:14px;color:#8a8a8a;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ m.preview }}</div>
+            </div>
+            <div style="flex-shrink: 0; display: flex; flex-direction: row; align-items: center; gap: 8px; justify-content: center">
+              <sc-if value="{{ m.pending }}" hint-placeholder-val="{{ false }}">
+                <x-import component-from-global-scope="LifeSGDesignSystem_15079f.Pill" hint-size="auto,auto" style="position: static; padding: 2px 12px; font-size: 12px; color: var(--text-warning,#98590C); border-color: var(--border-warning,#E4B571); background: var(--bg-warning-subtle,#FBF3E7); cursor: default; font-weight: 600; padding-left: 16px; padding-right: 16px; height: 36px">Action needed</x-import>
+              </sc-if>
+              <span style="font-size:13px;color:#8a8a8a;white-space:nowrap">{{ m.date }}</span>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<template id="__bundler_thumbnail" data-bg-color="#E7F0FA">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#E7F0FA"></rect><g fill="none" stroke="#1768BE" stroke-width="28" stroke-linejoin="round"><rect x="360" y="280" width="480" height="300" rx="24"></rect><path d="M360 300 L600 460 L840 300"></path></g></svg>
+</template></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { filter: "all", openId: null, read: {} };
+
+  renderVals() {
+    const s = this.state;
+
+    const mailDefs = [
+      { agency: "IRAS", subject: "Your Notice of Assessment for YA2026 is ready", preview: "View your tax payable and instalment plan options.", date: "2 Jul 2026", unread: true, pending: false, body: "Your Notice of Assessment (NOA) for the Year of Assessment 2026 is now available. Your assessed tax payable is $2,480. You may pay in full by 30 Jul 2026, or opt for the 12-month interest-free GIRO instalment plan. Please review your assessment and raise any objections within 30 days from the date of this notice." },
+      { agency: "HDB", subject: "Action required: Confirm your HFE letter details", preview: "Please verify your household income declaration by 15 Jul.", date: "28 Jun 2026", unread: true, pending: true, body: "We are processing your HDB Flat Eligibility (HFE) letter application. To proceed, please confirm your household income declaration and the list of occupiers. This step must be completed by 15 Jul 2026, failing which your application will lapse and you will need to reapply." },
+      { agency: "MOH", subject: "Your Healthier SG enrolment is confirmed", preview: "You're now enrolled with Dr Tan at Yishun Polyclinic.", date: "24 Jun 2026", unread: true, pending: false, body: "Thank you for enrolling in Healthier SG. You are now enrolled with Dr Tan Wei Ming at Yishun Polyclinic. Your first health plan consultation is complimentary. Book an appointment through the HealthHub app to develop your personalised health plan." },
+      { agency: "CPF Board", subject: "Contribution statement for June 2026", preview: "Your monthly statement is now available to view.", date: "20 Jun 2026", unread: true, pending: false, body: "Your CPF contribution statement for June 2026 is now available. A total of $1,850 was credited across your Ordinary, Special and MediSave accounts. Log in to my cpf to view the full breakdown and your latest account balances." },
+      { agency: "ICA", subject: "Passport renewal reminder", preview: "Your passport expires on 12 Dec 2026. Renew early.", date: "18 Jun 2026", unread: true, pending: false, body: "Your Singapore passport will expire on 12 Dec 2026. We recommend renewing at least 6 months before expiry, especially if you have upcoming travel. You can renew online via the ICA e-Service; your new passport will be delivered to your registered address." },
+      { agency: "LTA", subject: "Season parking renewal confirmation", preview: "Your season parking has been renewed until Dec 2026.", date: "12 Jun 2026", unread: true, pending: false, body: "Your season parking has been successfully renewed and is valid until 31 Dec 2026. A payment of $110 was charged to your registered payment method. No further action is required." },
+      { agency: "CDC", subject: "Your CDC vouchers have been claimed", preview: "$300 in vouchers credited on 3 May 2026.", date: "3 May 2026", unread: false, pending: false, body: "You have successfully claimed $300 in CDC vouchers. These may be used at participating heartland merchants and supermarkets until 31 Dec 2026. Visit the CDC Vouchers site to view your balance and find participating shops near you." },
+      { agency: "SupportGoWhere", subject: "Assistance scheme results", preview: "Based on your profile, you may qualify for 2 schemes.", date: "28 Apr 2026", unread: false, pending: false, body: "Based on the details you provided, you may be eligible for 2 assistance schemes: the Assurance Package Cash and the GST Voucher. Visit SupportGoWhere to view the full eligibility criteria and apply directly online.", attachment: "Assistance-scheme-results.pdf" },
+    ];
+
+    const withId = mailDefs.map((m, i) => ({ ...m, id: i, unread: m.unread && !s.read[i] }));
+
+    const filter = s.filter;
+    const filtered = withId.filter((m) =>
+      filter === "pending" ? m.pending : filter === "unread" ? m.unread : true
+    );
+
+    const openMail = () => (s.openId != null ? withId.find((m) => m.id === s.openId) : null);
+    const open = openMail();
+
+    const mails = filtered.map((m) => ({
+      ...m,
+      subjectWeight: m.unread ? 700 : 400,
+      onClick: (e) => { if (e) e.preventDefault(); this.setState({ openId: m.id, read: { ...s.read, [m.id]: true } }); },
+      rowStyle: "display:flex;align-items:center;gap:16px;padding:18px 22px;text-decoration:none;cursor:pointer;border-bottom:1px solid var(--border,#DDE1E2);background:" + (m.unread ? "#fff" : "#FBFBFB"),
+      unreadDotStyle: "flex-shrink:0;width:9px;height:9px;border-radius:999px;background:" + (m.unread ? "var(--bg-primary,#1768BE)" : "transparent"),
+    }));
+
+    const goBack = (e) => { if (e) e.preventDefault(); this.setState({ openId: null }); };
+    const isOpen = open != null;
+
+    const chip = (key, label) => {
+      const active = filter === key;
+      return {
+        label,
+        onClick: () => this.setState({ filter: key }),
+        style: "cursor:pointer;font-family:inherit;font-size:15px;font-weight:600;padding:8px 18px;border-radius:999px;border:1px solid " +
+          (active ? "var(--bg-primary,#1768BE)" : "var(--border,#DDE1E2)") +
+          ";background:" + (active ? "var(--bg-primary,#1768BE)" : "#fff") +
+          ";color:" + (active ? "#fff" : "var(--text,#282828)"),
+      };
+    };
+
+    const pendingCount = withId.filter((m) => m.pending).length;
+    const unreadCount = withId.filter((m) => m.unread).length;
+
+    const filters = [
+      chip("all", "All mails"),
+      chip("unread", "Unread (" + unreadCount + ")"),
+      chip("pending", "Action needed (" + pendingCount + ")"),
+    ];
+
+    const listDisplay = isOpen ? "none" : "block";
+    const unreadLabel = unreadCount + " unread";
+
+    return { filters, mails, isOpen, open, goBack, listDisplay, unreadLabel };
+  }
+}
+</script>
+</body>
+</html>

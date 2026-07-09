@@ -1,0 +1,46 @@
+/* ============================================================
+   LifeSG — base element resets / defaults
+   Sets the document baseline so plain HTML inherits the brand.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--body-size-baseline);
+    line-height: var(--body-lh-baseline);
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--hyperlink);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--hyperlink-hover);
+    text-decoration: underline;
+}
+a:visited {
+    color: var(--hyperlink-visited);
+}
+
+:focus-visible {
+    outline: var(--border-width-020) solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
+@keyframes ds-spin {
+    to { transform: rotate(360deg); }
+}
